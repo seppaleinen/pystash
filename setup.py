@@ -1,5 +1,5 @@
 try:
-  from setuptools import setup
+  from setuptools import setup, find_packages
 except ImportError:
   from distutils.core import setup
   
@@ -8,7 +8,7 @@ setup(
     version='0.0.14',
     author='Alexander Davydov',
     author_email='nyddle@gmail.com',
-    packages=[ 'pystash' ],
+    packages=find_packages(),
     scripts=[ 'bin/stash' ],
     url='http://pypi.python.org/pypi/pystash/',
     license='LICENSE.txt',
@@ -28,4 +28,5 @@ setup(
         "wsgiref>=0.1.2",
         "xerox"
     ],
+    test_suite="tests",
 )
